@@ -30,6 +30,13 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.0.3</version> <!-- You can check for the latest version on the project's GitHub page -->
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
 </project>
