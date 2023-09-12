@@ -1,6 +1,7 @@
 package LoginEngine;
 
 import Utilities.WaitUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -11,6 +12,8 @@ public class LoginEngine {
     private WaitUtils waitUtils;
     private final WebDriver driver;
     Actions actions;
+
+
 
     public LoginEngine(WebDriver driver) {
         this.driver = driver;
@@ -39,7 +42,15 @@ public class LoginEngine {
         waitSeconds(10);
 
 
+        test().click();
+        test().sendKeys("");
 
+
+    }
+
+    public WebElement test () {
+
+        return driver.findElement(By.id("marcus"));
     }
 
 

@@ -1,7 +1,9 @@
 package Netflix;
 
 import Utilities.WebDriverFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -54,6 +56,13 @@ public class GoToNetflix {
         netflixSignInPage.handleList();
        // netflixSignInPage.waitSeconds(5);
 
+        Assert.assertTrue(marcus().isDisplayed());
+      
+
+    }
+
+    public WebElement marcus() {
+        return driver.findElement(By.id("marcus"));
     }
 
     public boolean searchInputDisplayed() {
